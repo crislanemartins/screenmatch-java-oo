@@ -3,25 +3,19 @@ package br.com.alura.screenmatch.modelos;
 public class Titulo {
     private String nome;
     private int anoDeLancamento;
-    private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacao;
     private int duracaoEmMinuto;
+    private boolean incluidoNoPlano;
+
+
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
 
     public int getDuracaoEmMinuto() {
         return duracaoEmMinuto;
-    }
-
-    public boolean isIncluidoNoPlano() {
-        return incluidoNoPlano;
-    }
-
-    public int getAnoDeLancamento() {
-        return anoDeLancamento;
-    }
-
-    public String getNome() {
-        return nome;
     }
 
     public int getTotalDeAvaliacao(){
@@ -32,8 +26,17 @@ public class Titulo {
         this.nome = nome;
     }
 
+    public String getNome() {
+        return nome;
+
+    }
+
     public void setAnoDeLancamento(int anoDeLancamento) {
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
     }
 
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
