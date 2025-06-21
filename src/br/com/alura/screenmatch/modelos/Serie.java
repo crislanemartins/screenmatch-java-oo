@@ -34,8 +34,8 @@ public class Serie extends Titulo {
         this.episodiosPorTemporada = episodiosPorTemporada;
     }
 
-    public boolean isAtiva() {
-    return ativa;
+    public boolean isAtiva()    {
+            return ativa;
     }
 
 public void setAtiva(boolean ativa) {
@@ -45,5 +45,10 @@ public void setAtiva(boolean ativa) {
     @Override
     public int getDuracaoEmMinuto() {
         return temporada * episodiosPorTemporada * minutosPorEpisodio;
+    }
+
+    @Override
+    public String toString() {
+        return "Séria: " + this.getNome() + "(" + this.getAnoDeLancamento() + ")";
     }
 }
